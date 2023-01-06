@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //字面量创建对象
+        let obj1 = {
+            name: 'Tony',
+            age: 20,
+            sex: '男',
+            sayThings: function () {
+                console.log('hi');
+            }
+        }
+        console.log(obj1.name);
+        console.log(obj1['age']);
+        obj1.sayThings();
+        //new Object创建对象
+        let obj2 = new Object();
+        obj2.name = 'Tony';
+        obj2.age = 20;
+        obj2.sex = '男';
+        obj2.sayThings = function () {
+            console.log('hi');
+        }
+        console.log(obj2['name']);
+        console.log(obj2.sex);
+        obj2.sayThings();
+        //函数创建对象
+        function Dog(name, age, color) {
+            this.name = name;
+            this.age = age;
+            this.color = color;
+            this.doThings = function (val) {
+                console.log(val);
+            }
+        }
+        let li = new Dog('Lily', 2, 'black');
+        console.log(li.name);
+        console.log(li['age']);
+        li.doThings('sing songs');
+        let bo = new Dog('bobby', 1, 'white');
+        console.log(bo.name);
+        console.log(bo.color);
+        bo.doThings('play balls');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
